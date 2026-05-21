@@ -4,7 +4,7 @@
   box-sizing: border-box;
   font-family: Arial, sans-serif;
 }
-
+/* Navbar Hissesi Basladi */
 .navbar {
   width: 100%;
   padding: 20px 60px;
@@ -29,6 +29,9 @@
 .nav-links li {
   cursor: pointer;
 }
+/* Navbar hissesi bitdi */
+
+/* Hero Hissesi Basladi */
 .hero {
   width: 100%;
   height: 100vh;
@@ -73,3 +76,227 @@
   cursor: pointer;
   border-radius: 8px;
 }
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.watch-btn {
+  background: transparent !important;
+  color: white;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.play-icon {
+  width: 42px;
+  height: 42px;
+  border: 2px solid #d4a373;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+
+.video-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.video-box {
+  width: 700px;
+  height: 400px;
+  position: relative;
+  background: black;
+}
+
+.video-box iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.close-video {
+  position: absolute;
+  top: -45px;
+  right: 0;
+  background: white;
+  color: black;
+  border: none;
+  font-size: 30px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+/* Hero Hissesi Bitdi */
+
+
+/* About Hissesi Basladi */
+.about {
+  width: 100%;
+  padding: 120px 80px;
+  background: #f8f8f8;
+}
+
+.about-title {
+  text-align: center;
+  font-size: 55px;
+  margin-bottom: 80px;
+  color: #0b2239;
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+}
+
+.about-left img {
+  width: 650px;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.about-right {
+  width: 650px;
+}
+
+.about-right h2 {
+  font-size: 58px;
+  line-height: 1.2;
+  margin-bottom: 30px;
+  color: #111;
+}
+
+.about-right p {
+  font-size: 19px;
+  line-height: 1.9;
+  color: #555;
+  margin-bottom: 25px;
+}
+
+.about-cards {
+  display: flex;
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.about-card {
+  width: 180px;
+  padding: 35px 20px;
+  background: white;
+
+  border-radius: 14px;
+
+  text-align: center;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+
+  transition: 0.3s;
+}
+
+.about-card:hover {
+  transform: translateY(-10px);
+}
+
+.about-card h3 {
+  font-size: 42px;
+  color: #d4a373;
+  margin-bottom: 12px;
+}
+
+.about-card span {
+  font-size: 18px;
+  color: #444;
+}
+/* About Hissesi Bitdi */
+
+
+
+/* Rooms Hisse Basladi */
+.rooms {
+  width: 100%;
+  padding: 120px 80px;
+  background: white;
+}
+
+.rooms-title {
+  text-align: center;
+  font-size: 55px;
+  margin-bottom: 70px;
+  color: #0b2239;
+}
+
+.rooms-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 35px;
+}
+
+.room-card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+
+  transition: 0.4s;
+}
+
+.room-card:hover {
+  transform: translateY(-10px);
+}
+
+.room-card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+}
+
+.room-info {
+  padding: 25px;
+}
+
+.room-info h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  color: #111;
+}
+
+.room-info p {
+  font-size: 20px;
+  color: #d4a373;
+  margin-bottom: 20px;
+}
+
+.room-info button {
+  width: 100%;
+  padding: 14px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: #0b2239;
+  color: white;
+
+  font-size: 17px;
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.room-info button:hover {
+  background: #d4a373;
+}
+/* Rooms Hisse bitdi */
