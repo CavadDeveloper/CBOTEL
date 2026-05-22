@@ -152,6 +152,7 @@
   font-size: 55px;
   margin-bottom: 80px;
   color: #0b2239;
+  font-family: "Barlow Condensed";
 }
 
 .about-container {
@@ -159,6 +160,9 @@
   align-items: center;
   justify-content: center;
   gap: 80px;
+}
+.about-header{
+  font-family: "Barlow Condensed";
 }
 
 .about-left img {
@@ -232,6 +236,7 @@
 }
 
 .rooms-title {
+  font-family: "Gilda Display";
   text-align: center;
   font-size: 55px;
   margin-bottom: 70px;
@@ -300,3 +305,237 @@
   background: #d4a373;
 }
 /* Rooms Hisse bitdi */
+
+/* Menu Hissesi Basladi */
+
+.menu {
+  width: 100%;
+  padding: 120px 80px;
+  background: #f8f8f8;
+}
+
+.menu-title {
+  text-align: center;
+  font-size: 55px;
+  margin-bottom: 40px;
+  color: #0b2239;
+}
+
+.menu-filters {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 60px;
+  flex-wrap: wrap;
+}
+
+.menu-filters button {
+  padding: 14px 28px;
+  border: none;
+  border-radius: 30px;
+  background: white;
+  color: #0b2239;
+  font-size: 17px;
+  cursor: pointer;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+.menu-filters .active-filter {
+  background: #d4a373;
+  color: white;
+}
+
+.menu-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.menu-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.menu-card:hover {
+  transform: translateY(-8px);
+}
+
+.menu-card img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+}
+
+.menu-info {
+  padding: 25px;
+}
+
+.menu-info h2 {
+  font-size: 25px;
+  margin-bottom: 12px;
+  color: #111;
+}
+
+.menu-info p {
+  color: #777;
+  margin-bottom: 18px;
+}
+
+.menu-info span {
+  color: #d4a373;
+  font-size: 22px;
+  font-weight: bold;
+}
+/* Menu Hissei Bitdi */
+
+/* Comment Hissesi Basladi */
+.comments {
+  width: 100%;
+  padding: 120px 80px;
+  background: white;
+}
+
+.comments-title {
+  text-align: center;
+  font-size: 55px;
+  margin-bottom: 70px;
+  color: #0b2239;
+}
+
+.comments-container {
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+}
+
+.comment-card {
+  width: 360px;
+  padding: 35px;
+  background: #f8f8f8;
+  border-radius: 18px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.comment-card:hover {
+  transform: translateY(-8px);
+}
+
+.comment-card img {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.comment-card h2 {
+  font-size: 24px;
+  margin-bottom: 18px;
+  color: #111;
+}
+
+.comment-card p {
+  font-size: 17px;
+  line-height: 1.7;
+  color: #555;
+}
+/* Comment Hissesi Bitdi */
+
+/* Events Hissesi Basladi */
+.events {
+  width: 100%;
+  padding: 120px 80px;
+  background: #f8f8f8;
+}
+
+.events-title {
+  text-align: center;
+  font-size: 55px;
+  margin-bottom: 70px;
+  color: #0b2239;
+}
+
+.event-card {
+  width: 100%;
+  max-width: 1300px;
+
+  margin: auto;
+
+  display: flex;
+  align-items: center;
+
+  background: white;
+
+  border-radius: 20px;
+
+  overflow: hidden;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.event-card img {
+  width: 50%;
+  height: 600px;
+  object-fit: cover;
+}
+
+.event-info {
+  width: 50%;
+  padding: 60px;
+}
+
+.event-info h2 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: #111;
+}
+
+.event-info span {
+  font-size: 28px;
+  color: #d4a373;
+  font-weight: bold;
+
+  display: block;
+
+  margin-bottom: 25px;
+}
+
+.event-info p {
+  font-size: 20px;
+  line-height: 1.9;
+  color: #555;
+
+  margin-bottom: 40px;
+}
+
+.event-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.event-buttons button {
+  width: 60px;
+  height: 60px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: #0b2239;
+  color: white;
+
+  font-size: 28px;
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.event-buttons button:hover {
+  background: #d4a373;
+}
+
+/* Events Hissesi Bitdi */

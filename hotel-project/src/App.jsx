@@ -3,8 +3,9 @@ import Navbar from "./Components/Navbar";
 import Hero from "./Components/Hero";
 import About from "./Components/About";
 import Rooms from "./Components/Rooms";
-import VideoSection from "./Components/VideoSection";
-import Reviews from "./Components/Comment";
+import Menu from "./Components/Menu";
+import Comment from "./Components/Comment";
+import Event from "./Components/Event"
 import Reservation from "./Components/Reservation";
 import Contact from "./Components/Contact";
 import Chatbot from "./Components/Chatbot";
@@ -16,8 +17,9 @@ export default function App(){
       <Hero />
       <About />
       <Rooms />
-      <VideoSection />
-      <Reviews />
+      <Menu />
+      <Event />
+      <Comment />
       <Reservation />
       <Contact />
       <Chatbot />

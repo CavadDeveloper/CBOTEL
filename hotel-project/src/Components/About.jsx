@@ -15,7 +15,7 @@ export default function About() {
 
         <div className="about-right">
 
-          <h2>
+          <h2 className="about-header">
             Sizə unudulmaz
             istirahət təqdim edirik
           </h2>
