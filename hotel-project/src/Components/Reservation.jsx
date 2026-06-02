@@ -1,4 +1,5 @@
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
 
 export default function Reservation() {
   const [formData, setFormData] = useState({
@@ -22,22 +23,46 @@ export default function Reservation() {
   function handleSubmit(e) {
     e.preventDefault();
 
-    alert("Rezervasiyanız uğurla göndərildi!");
+    const templateParams = {
+      user_name: formData.fullname,
+      email: formData.email,
+      phone: formData.phone,
+      guests: formData.guests,
+      check_in: formData.checkIn,
+      check_out: formData.checkOut,
+      room_type: formData.roomType,
+      message: formData.message,
+    };
 
-    setFormData({
-      fullname: "",
-      email: "",
-      phone: "",
-      guests: "",
-      checkIn: "",
-      checkOut: "",
-      roomType: "",
-      message: "",
-    });
+    emailjs
+      .send(
+        "service_zkjkgbm",
+        "template_qfajqfi",
+        templateParams,
+        "4fcPACydw2mEfboxr"
+      )
+      .then(() => {
+        alert("Rezervasiyanız uğurla göndərildi! Email təsdiqi göndərildi.");
+
+        setFormData({
+          fullname: "",
+          email: "",
+          phone: "",
+          guests: "",
+          checkIn: "",
+          checkOut: "",
+          roomType: "",
+          message: "",
+        });
+      })
+      .catch((error) => {
+        console.log(error);
+        alert("Email göndərilmədi. Zəhmət olmasa yenidən yoxlayın.");
+      });
   }
 
   return (
-    <section className="reservation">
+    <section id="reservation" className="reservation">
       <h1 className="reservation-title">Rezervasiya et</h1>
 
       <form className="reservation-form" onSubmit={handleSubmit}>
@@ -115,9 +140,13 @@ export default function Reservation() {
         >
           <option value="">Otaq növü seçin</option>
           <option value="Deluxe Room">Deluxe Room</option>
+          <option value="Luxury Suite">Luxury Suite</option>
           <option value="Family Room">Family Room</option>
+          <option value="Classic Room">Classic Room</option>
           <option value="Premium Room">Premium Room</option>
+          <option value="Ocean View Room">Ocean View Room</option>
           <option value="Royal Suite">Royal Suite</option>
+          <option value="Modern Room">Modern Room</option>
         </select>
 
         <textarea
@@ -127,9 +156,7 @@ export default function Reservation() {
           onChange={handleChange}
         ></textarea>
 
-        <button type="submit">
-          Rezervasiya et
-        </button>
+        <button type="submit">Rezervasiya et</button>
       </form>
     </section>
   );

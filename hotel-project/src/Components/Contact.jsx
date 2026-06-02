@@ -1,6 +1,6 @@
 export default function Contact() {
   return (
-    <section className="contact">
+    <section id="contact" className="contact">
       <h1 className="contact-title">
         Bizimlə Əlaqə
       </h1>

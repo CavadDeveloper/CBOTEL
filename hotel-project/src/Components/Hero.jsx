@@ -20,7 +20,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section
+    <section id="home"
       className="hero"
       style={{ backgroundImage: `url(${images[currentImage]})` }}
     >
@@ -33,7 +33,20 @@ export default function Hero() {
         </p>
 
         <div className="hero-buttons">
-          <button>Rezerv et</button>
+          <button
+  onClick={() => {
+    const reservationSection = document.getElementById("reservation");
+
+    if (reservationSection) {
+      reservationSection.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  }}
+>
+  Rezerv et
+</button>
 
           <button className="watch-btn" onClick={() => setShowVideo(true)}>
             <span className="play-icon">▶</span>

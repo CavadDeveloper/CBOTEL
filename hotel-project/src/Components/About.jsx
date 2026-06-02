@@ -1,6 +1,6 @@
 export default function About() {
   return (
-    <section className="about">
+    <section id="about" className="about">
 
       <h1 className="about-title">Haqqımızda</h1>
 
