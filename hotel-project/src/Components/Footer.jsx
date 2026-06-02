@@ -32,7 +32,7 @@ export default function Footer() {
           <h3>Əlaqə</h3>
 
           <p>📍 Bakı şəhəri, Nizami küçəsi 125</p>
-          <p>📞 +994 50 123 45 67</p>
+          <p>📞 +994 50 203 55 57</p>
           <p>✉️ info@cbotel.az</p>
         </div>
 
