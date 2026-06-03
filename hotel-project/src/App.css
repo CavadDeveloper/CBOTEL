@@ -649,6 +649,37 @@ html {
   cursor: pointer;
 }
 
+.event-section {
+  margin-top: 25px;
+}
+
+.event-title {
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: black;
+}
+
+.event-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.event-options label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #f5f5f5;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.event-options input {
+  width: auto !important;
+}
 .reservation-form button:hover {
   background: #b88350;
 }
@@ -866,3 +897,79 @@ html {
   border-radius: 10px;
 }
 /* Room Detail Hissesi Bitdi */
+
+/* ChatBot Hissesi Basladi */
+.chatbot {
+  width: 100%;
+  padding: 120px 80px;
+  background: white;
+}
+
+.chatbot-title {
+  text-align: center;
+  font-size: 55px;
+  color: #0b2239;
+  margin-bottom: 50px;
+}
+
+.chatbot-box {
+  max-width: 800px;
+  margin: auto;
+  background: #f8f8f8;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.chat-messages {
+  height: 400px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.bot-message,
+.user-message {
+  max-width: 75%;
+  padding: 15px 20px;
+  border-radius: 15px;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+.bot-message {
+  background: white;
+  color: #333;
+  align-self: flex-start;
+}
+
+.user-message {
+  background: #0b2239;
+  color: white;
+  align-self: flex-end;
+}
+
+.chat-input-area {
+  display: flex;
+  gap: 15px;
+}
+
+.chat-input-area input {
+  flex: 1;
+  padding: 17px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+.chat-input-area button {
+  padding: 17px 28px;
+  border: none;
+  background: #d4a373;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+/* ChatBot Hissesi Bitdi */

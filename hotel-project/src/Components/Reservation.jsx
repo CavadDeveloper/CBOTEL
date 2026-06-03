@@ -10,6 +10,7 @@ export default function Reservation() {
     checkIn: "",
     checkOut: "",
     roomType: "",
+    events: [],
     message: "",
   });
 
@@ -18,6 +19,22 @@ export default function Reservation() {
       ...formData,
       [e.target.name]: e.target.value,
     });
+  }
+
+  function handleEventChange(e) {
+    const value = e.target.value;
+
+    if (e.target.checked) {
+      setFormData({
+        ...formData,
+        events: [...formData.events, value],
+      });
+    } else {
+      setFormData({
+        ...formData,
+        events: formData.events.filter((event) => event !== value),
+      });
+    }
   }
 
   function handleSubmit(e) {
@@ -31,6 +48,10 @@ export default function Reservation() {
       check_in: formData.checkIn,
       check_out: formData.checkOut,
       room_type: formData.roomType,
+      events:
+        formData.events.length > 0
+          ? formData.events.join(", ")
+          : "Seçilməyib",
       message: formData.message,
     };
 
@@ -52,6 +73,7 @@ export default function Reservation() {
           checkIn: "",
           checkOut: "",
           roomType: "",
+          events: [],
           message: "",
         });
       })
@@ -109,7 +131,6 @@ export default function Reservation() {
         <div className="form-row">
           <div className="date-group">
             <label>Giriş tarixi</label>
-
             <input
               type="date"
               name="checkIn"
@@ -121,7 +142,6 @@ export default function Reservation() {
 
           <div className="date-group">
             <label>Çıxış tarixi</label>
-
             <input
               type="date"
               name="checkOut"
@@ -148,6 +168,41 @@ export default function Reservation() {
           <option value="Royal Suite">Royal Suite</option>
           <option value="Modern Room">Modern Room</option>
         </select>
+
+        <div className="event-section">
+          <label className="event-title">Tədbirlər (İstəyə bağlı)</label>
+
+          <div className="event-options">
+            <label>
+              <input type="checkbox" value="Ad Günü" onChange={handleEventChange} />
+              Ad Günü
+            </label>
+
+            <label>
+              <input type="checkbox" value="Biznes Görüşü" onChange={handleEventChange} />
+              Biznes Görüşü
+            </label>
+
+            <label>
+              <input type="checkbox" value="Canlı Musiqi Gecəsi" onChange={handleEventChange} />
+              Canlı Musiqi Gecəsi
+            </label>
+
+            <label>
+              <input type="checkbox" value="Romantik Şam Yeməyi" onChange={handleEventChange} />
+              Romantik Şam Yeməyi
+            </label>
+
+            <label>
+              <input type="checkbox" value="Spa Günü" onChange={handleEventChange} />
+              Spa Günü
+            </label>
+            <label>
+              <input type="checkbox" value="Bakı Turu" onChange={handleEventChange} />
+              Bakı Turu
+            </label>
+          </div>
+        </div>
 
         <textarea
           name="message"

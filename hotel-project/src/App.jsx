@@ -26,8 +26,8 @@ function HomePage() {
       <Event />
       <Comment />
       <Reservation />
-      <Contact />
       <Chatbot />
+      <Contact />
       <Footer />
     </>
   );

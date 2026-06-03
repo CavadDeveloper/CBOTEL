@@ -5,7 +5,7 @@ import businessmeet from "../assets/images/Event/businessmeet.jpg";
 import livemusicnight from "../assets/images/Event/livemusicnight.jpg";
 import romanticdinner from "../assets/images/Event/romanticdinner.jpg";
 import spa from "../assets/images/Event/spa.jpg";
-
+import tour from "../assets/images/Event/tour.jpg"
 export default function Events() {
 
   const events = [
@@ -49,6 +49,13 @@ export default function Events() {
       text:
         "Spa və masaj xidmətlərimiz ilə bədəninizi və zehninizi rahatladın. Premium wellness təcrübəsi sizi gözləyir.",
     },
+    {
+  image: tour,
+  title: "Bakı Turu",
+  price: "200 AZN",
+  text:
+    "Qonaqlarımız üçün gözəl Bakımızı tanıdan xüsusi şəhər turu təşkil edirik. İçərişəhər, Dənizkənarı Bulvar və Flame Towers kimi məşhur məkanları rahat və maraqlı şəkildə kəşf edə bilərsiniz.",
+},
 
   ];
 

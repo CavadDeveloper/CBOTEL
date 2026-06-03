@@ -27,7 +27,7 @@ export default function Contact() {
 
           <div className="contact-card">
             <h3>📞 Telefon</h3>
-            <p>+994 50 123 45 67</p>
+            <p>+994 50 203 55 57</p>
           </div>
 
           <div className="contact-card">
