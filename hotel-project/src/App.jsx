@@ -14,6 +14,7 @@ import Chatbot from "./Components/Chatbot";
 import Footer from "./Components/Footer";
 
 import RoomDetail from "./Components/RoomDetail";
+import MenuDetail from "./Components/MenuDetail";
 
 function HomePage() {
   return (
@@ -38,6 +39,7 @@ export default function App() {
     <Routes>
       <Route path="/" element={<HomePage />} />
       <Route path="/room/:id" element={<RoomDetail />} />
+      <Route path="/menu/:id" element={<MenuDetail />} />
     </Routes>
   );
 }

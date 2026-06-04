@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 import bruschetta from "../assets/images/Menu/bruschetta.jpg";
 import burger from "../assets/images/Menu/burger.jpg";
@@ -23,6 +24,8 @@ import tea from "../assets/images/Menu/tea.jpg";
 
 export default function Menu() {
   const [filter, setFilter] = useState("Hamısı");
+
+  const navigate = useNavigate();
 
   const menuItems = [
     { image: omlet, name: "Tərəvəzli omlet", category: "Səhər yeməkləri", price: "8 AZN" },
@@ -65,10 +68,15 @@ export default function Menu() {
 
   return (
     <section className="menu">
-      <h1 className="menu-title">Restoran Menyusu</h1>
+
+      <h1 className="menu-title">
+        Restoran Menyusu
+      </h1>
 
       <div className="menu-filters">
+
         {categories.map((category) => (
+
           <button
             key={category}
             onClick={() => setFilter(category)}
@@ -76,22 +84,46 @@ export default function Menu() {
           >
             {category}
           </button>
+
         ))}
+
       </div>
 
       <div className="menu-container">
-        {filteredItems.map((item, index) => (
-          <div className="menu-card" key={index}>
-            <img src={item.image} alt={item.name} />
 
-            <div className="menu-info">
-              <h2>{item.name}</h2>
-              <p>{item.category}</p>
-              <span>{item.price}</span>
+        {filteredItems.map((item) => {
+
+          const realIndex = menuItems.findIndex(
+            (menuItem) => menuItem.name === item.name
+          );
+
+          return (
+
+            <div
+              className="menu-card"
+              key={item.name}
+              onClick={() => navigate(`/menu/${realIndex}`)}
+            >
+
+              <img src={item.image} alt={item.name} />
+
+              <div className="menu-info">
+
+                <h2>{item.name}</h2>
+
+                <p>{item.category}</p>
+
+                <span>{item.price}</span>
+
+              </div>
+
             </div>
-          </div>
-        ))}
+
+          );
+        })}
+
       </div>
+
     </section>
   );
 }

@@ -367,6 +367,20 @@ html {
   flex-wrap: wrap;
 }
 
+.menu-card {
+  cursor: pointer;
+  transition: 0.3s;
+  overflow: hidden;
+}
+
+.menu-card:hover {
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.menu-card img {
+  transition: 0.4s;
+}
+
 .menu-filters button {
   padding: 14px 28px;
   border: none;
@@ -973,3 +987,291 @@ html {
   cursor: pointer;
 }
 /* ChatBot Hissesi Bitdi */
+
+
+/* Menu Detail Hissesi Basladi */
+
+.menu-detail {
+  width: 100%;
+  min-height: 100vh;
+  padding: 8rem 6%;
+  background: #f7f7f7;
+}
+
+.menu-detail-content {
+  max-width: 75rem;
+  margin: 0 auto;
+  background: white;
+  border-radius: 1.5rem;
+  padding: 2.5rem;
+
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+
+  box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, 0.08);
+}
+
+.menu-detail-content img {
+  width: 50%;
+  height: 32rem;
+  object-fit: cover;
+  border-radius: 1.2rem;
+}
+
+.menu-detail-info {
+  width: 50%;
+}
+
+.back-home {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  color: #d4a373;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.menu-detail-info h1 {
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  color: #0b2239;
+  margin-bottom: 1rem;
+}
+
+.menu-detail-info span {
+  display: inline-block;
+  font-size: 1.5rem;
+  color: #d4a373;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.menu-detail-category {
+  color: #777;
+  margin-bottom: 2rem;
+}
+
+.menu-detail-info h3 {
+  color: #0b2239;
+  font-size: 1.4rem;
+  margin: 1.5rem 0 0.7rem;
+}
+
+.menu-detail-info p {
+  color: #555;
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+/* Menu Detail Hissesi Bitdi */
+
+
+/* Responsivlik */
+
+@media (max-width: 991px) {
+  .navbar {
+    padding: 0 5%;
+  }
+
+  .navbar-logo {
+    width: 8rem;
+  }
+
+  .nav-links {
+    gap: 1.2rem;
+  }
+
+  .nav-links a {
+    font-size: 0.75rem;
+    letter-spacing: 0.1rem;
+  }
+
+  .hero-overlay {
+    padding-left: 6%;
+  }
+
+  .hero-overlay h1,
+  .about-title,
+  .rooms-title,
+  .menu-title,
+  .events-title,
+  .comments-title,
+  .reservation-title,
+  .contact-title,
+  .chatbot-title {
+    font-size: clamp(2.2rem, 6vw, 3.5rem);
+  }
+
+  .hero-overlay p {
+    width: 80%;
+    font-size: 1.1rem;
+  }
+
+  .about-container,
+  .contact-container,
+  .event-card {
+    flex-direction: column;
+  }
+
+  .about-left img,
+  .about-right,
+  .contact-info,
+  .contact-form,
+  .event-card img,
+  .event-info {
+    width: 100%;
+  }
+
+  .rooms-container,
+  .menu-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .comments-container {
+    flex-wrap: wrap;
+  }
+
+  .footer-container {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    height: auto;
+    padding: 1rem 5%;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .navbar-logo {
+    width: 7rem;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.9rem;
+  }
+
+  .nav-links a {
+    font-size: 0.7rem;
+    letter-spacing: 0.08rem;
+  }
+
+  .hero {
+    height: 100vh;
+  }
+
+  .hero-overlay {
+    padding: 0 6%;
+    align-items: flex-start;
+  }
+
+  .hero-overlay h1 {
+    font-size: clamp(2.2rem, 12vw, 3.5rem);
+  }
+
+  .hero-overlay p {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .about,
+  .rooms,
+  .menu,
+  .events,
+  .comments,
+  .reservation,
+  .contact,
+  .chatbot {
+    padding: 5rem 5%;
+  }
+
+  .about-container {
+    gap: 2rem;
+  }
+
+  .about-left img {
+    height: auto;
+  }
+
+  .about-right h2 {
+    font-size: 2rem;
+  }
+
+  .about-cards,
+  .comments-container,
+  .form-row,
+  .contact-container,
+  .footer-container {
+    flex-direction: column;
+  }
+
+  .about-card,
+  .comment-card {
+    width: 100%;
+  }
+
+  .rooms-container,
+  .menu-container {
+    grid-template-columns: 1fr;
+  }
+
+  .event-card img {
+    height: 18rem;
+  }
+
+  .event-info {
+    padding: 2rem;
+  }
+
+  .event-info h2 {
+    font-size: 2rem;
+  }
+
+  .reservation-form {
+    padding: 2rem;
+  }
+
+  .chatbot-box {
+    padding: 1.2rem;
+  }
+
+  .chat-messages {
+    height: 22rem;
+  }
+
+  .chat-input-area {
+    flex-direction: column;
+  }
+
+  .footer {
+    padding: 3rem 5% 1rem;
+  }
+
+  .room-detail {
+    padding: 5rem 5%;
+  }
+
+  .room-detail-content {
+    padding: 2rem;
+  }
+
+  .room-detail-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .room-detail-content img {
+    height: 20rem;
+  }
+
+  .room-features {
+    grid-template-columns: 1fr;
+  }
+}
+/* Responsivlik Bitdi */
