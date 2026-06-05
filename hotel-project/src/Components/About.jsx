@@ -1,3 +1,5 @@
+import room from "../assets/images/room.jpg";
+
 export default function About() {
   return (
     <section id="about" className="about">
@@ -8,7 +10,7 @@ export default function About() {
 
         <div className="about-left">
           <img
-            src="./src/assets/images/room.jpg"
+            src={room}
             alt="hotel room"
           />
         </div>
