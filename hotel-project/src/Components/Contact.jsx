@@ -32,7 +32,7 @@ export default function Contact() {
 
           <div className="contact-card">
             <h3>✉️ Email</h3>
-            <p>info@cbotel.az</p>
+            <p><a href="mailto:info@cbotel.az">info@cbotel.az</a></p>
           </div>
 
           <div className="contact-card">
