@@ -10,7 +10,7 @@ import Comment from "./Components/Comment";
 import Event from "./Components/Event";
 import Reservation from "./Components/Reservation";
 import Contact from "./Components/Contact";
-import Chatbot from "./Components/Chatbot";
+import Chatbot from "./Components/ChatBot";
 import Footer from "./Components/Footer";
 
 import RoomDetail from "./Components/RoomDetail";
